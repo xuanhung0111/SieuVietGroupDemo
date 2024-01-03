@@ -18,7 +18,8 @@ public class DriverManager {
     }
 
     public static void initializeDriver() {
-        System.setProperty("webdriver.chrome.driver", "/Users/nguyenhung/Downloads/chromedriver");
+        String chromePath  = System.getProperty("user.dir")+"/chromedriver";
+        System.setProperty("webdriver.chrome.driver", chromePath);
         driver = new ChromeDriver();
         driver.manage().window().maximize();
     }
